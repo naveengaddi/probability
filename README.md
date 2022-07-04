@@ -51,6 +51,6 @@ Input:
 Output:
 
 ```text
-P1 and P2 are equal
+both probabilities are equal
 ```
 
