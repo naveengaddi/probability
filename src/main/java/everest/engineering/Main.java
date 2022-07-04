@@ -3,14 +3,16 @@ package everest.engineering;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InvalidProbabilityException {
         Scanner scanner = new Scanner(System.in);
-        double p1 = scanner.nextDouble();
-        double p2 = scanner.nextDouble();
-        if (p1 == p2) {
-            System.out.println("P1 and P2 are equal");
+        double probabilityValue = scanner.nextDouble();
+        double anotherProbabilityValue = scanner.nextDouble();
+        Probability probability = new Probability(probabilityValue);
+        Probability anotherProbability = new Probability(anotherProbabilityValue);
+        if (probability.equals(anotherProbability)) {
+            System.out.println("both probabilities are equal");
         } else {
-            System.out.println("P1 and P2 are not equal");
+            System.out.println("both probabilities are not equal");
         }
     }
 }
